@@ -1,5 +1,13 @@
 # ibo-digital
 
+# Django Part 1/2 Backend
+
+pip3 install pipenv   
+
+pipenv shell
+
+# React Part 2/2 Backend
+
 # Install dependencies
 npm install
 
