@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
+/* import Reach from '../../reach-integration/views/render' */
+import AlgoSigner from '../algosigner/Algosigner'
 
 export class Header extends Component {
   static propTypes = {
@@ -16,6 +18,21 @@ export class Header extends Component {
 
     const authLinks = (
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+         {/* <li className="nav-item">
+          <Link to="/reach" className="nav-link">
+            reach
+          </Link>
+        </li> */}
+        <li className="nav-item">
+          <Link to="/algosigner" className="nav-link">
+            Algosigner
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link to="/overview" className="nav-link">
+            Overview
+          </Link>
+        </li>
         <span className="navbar-text mr-3">
           <strong>{user ? `Welcome ${user.username}` : ''}</strong>
         </span>
@@ -58,7 +75,7 @@ export class Header extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <a className="navbar-brand" href="#">
-              IBO-Digital DLT
+              IBODigital DLT
             </a>
           </div>
           {isAuthenticated ? authLinks : guestLinks}

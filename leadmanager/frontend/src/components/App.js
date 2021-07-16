@@ -15,6 +15,17 @@ import { Provider } from 'react-redux';
 import store from '../store';
 import { loadUser } from '../actions/auth'
 
+/* import { render as Reach } from '../reach-integration/views/render' */
+import Algosigner from './algosigner/Algosigner'
+import { appRouter as Overview } from './overview/stateless/appRouter'
+
+import CreateAccountPage from "../components/overview/pages/createaccountpage";
+import RestoreAccountPage from "../components/overview/pages/restoreaccountcomponent";
+import AccountPage from "../components/overview/pages/accountpage";
+import TransactionPage from "../components/overview/pages/transactionpage"
+
+
+
 //Alert Options
  const alertOptions = {
      timeout: 3000,
@@ -40,6 +51,10 @@ class App extends Component {
                         component={Register} />
                          <Route exact path="/login" 
                         component={Login} />
+                       {/*  <PrivateRoute exact path="/reach"
+                        component={Reach} /> */}
+                        <PrivateRoute exact path="/algosigner"
+                        component={Algosigner} /> 
                     </Switch>
                 </div>
                </Fragment>

@@ -1,5 +1,15 @@
 # ibo-digital
 
+# Django Part 1/2 Backend
+
+pip3 install pipenv   
+
+pipenv shell
+
+pipenv install django djangorestframework django-rest-knox
+
+# React Part 2/2 Frontend
+
 # Install dependencies
 npm install
 
